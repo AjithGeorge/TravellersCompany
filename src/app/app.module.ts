@@ -13,6 +13,18 @@ import { TransparentNavbarComponent } from './transparent-navbar/transparent-nav
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
+import { NgxUiLoaderModule, NgxUiLoaderConfig, SPINNER, POSITION, PB_DIRECTION} from 'ngx-ui-loader';
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  // bgsColor: 'red',
+  // bgsPosition: POSITION.bottomCenter,
+  // bgsSize: 40,
+  bgsType: SPINNER.rectangleBounce, // background spinner type
+  fgsType: SPINNER.threeStrings, // foreground spinner type
+  // pbDirection: PB_DIRECTION.leftToRight, // progress bar direction
+  // pbThickness: 5 // progress bar thickness
+};
 
 
 const appRoutes: Routes = [
@@ -29,11 +41,13 @@ const appRoutes: Routes = [
     VideoCarouselComponent,
     TransparentNavbarComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxUiLoaderModule.forRoot((ngxUiLoaderConfig)),
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(
       appRoutes
