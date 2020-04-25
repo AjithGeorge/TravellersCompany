@@ -13,6 +13,7 @@ export class ListingsComponent {
     constructor(private _lightboxConfig: LightboxConfig, private _lightbox: Lightbox) {
       _lightboxConfig.wrapAround = true;
       _lightboxConfig.positionFromTop = 75;
+      _lightboxConfig.centerVertically = true;
       for (let i = 1; i <= 3; i++) {
       const src = 'https://mdbootstrap.com/img/Photos/Slides/img%20(6' + i + ').jpg';
       const caption = 'Image ' + i + ' caption here';
