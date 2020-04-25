@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
+import { Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -9,9 +10,15 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 })
 
 export class AppComponent implements OnInit {
-  constructor(private ngxService: NgxUiLoaderService) {}
-  title = 'travellersCompany';
+  constructor(private ngxService: NgxUiLoaderService, private readonly router: Router) {
 
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        window.scrollTo(0, 0)
+      }
+    });
+  }
+  title = 'travellersCompany';
 
   ngOnInit() {
     this.ngxService.start(); // start foreground spinner of the master loader with 'default' taskId

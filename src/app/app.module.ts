@@ -14,7 +14,13 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { NgxUiLoaderModule, NgxUiLoaderConfig, SPINNER, POSITION, PB_DIRECTION} from 'ngx-ui-loader';
+import { NgxUiLoaderModule, NgxUiLoaderRouterModule, NgxUiLoaderConfig, SPINNER, POSITION, PB_DIRECTION} from 'ngx-ui-loader';
+import { ListingsComponent } from './listings/listings.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { LightboxModule } from 'ngx-lightbox';
+import { NgbModule, NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
+import { FooterMinimumComponent } from './footer-minimum/footer-minimum.component';
+import { CardImageOverlayComponent } from './card-image-overlay/card-image-overlay.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   // bgsColor: 'red',
@@ -29,6 +35,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 
 const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
+  { path: 'listings', component: ListingsComponent },
   { path: '**', component: HomeComponent }
 ];
 
@@ -42,16 +49,23 @@ const appRoutes: Routes = [
     TransparentNavbarComponent,
     ContactComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ListingsComponent,
+    FooterMinimumComponent,
+    CardImageOverlayComponent
   ],
   imports: [
     BrowserModule,
+    LightboxModule,
     AppRoutingModule,
+    NgImageSliderModule,
     NgxUiLoaderModule.forRoot((ngxUiLoaderConfig)),
+    NgxUiLoaderRouterModule,
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
+    NgbModule
 
   ],
   providers: [],

@@ -1,0 +1,147 @@
+<app-navbar></app-navbar>
+
+<br><br>
+
+<!-- Jumbotron -->
+<div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">
+  <div class="text-white text-center rgba-stylish-medium py-5 px-4">
+    <div class="py-5">
+
+      <!-- Content -->
+      <!-- <h5 class="h5 orange-text"><i class="fas fa-camera-retro"></i> Photography</h5> -->
+      <h2 class="card-title h2 my-4 py-2">Jumbotron with image overlay</h2>
+      <p class="mb-4 pb-2 px-md-5 mx-md-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur obcaecati vero aliquid libero doloribus ad, unde tempora maiores, ullam, modi qui quidem minima debitis perferendis vitae cumque et quo impedit.</p>
+      <a class="btn peach-gradient"><i class="fas fa-clone left"></i> View project</a>
+
+    </div>
+  </div>
+</div>
+<!-- Jumbotron -->
+
+<br>
+
+<!-- Accordion-->
+<div class="container-fluid">
+  <ngb-accordion #acc="ngbAccordion"  activeIds="p0,p1" >
+    <ngb-panel id="p0">
+      <ng-template ngbPanelHeader>
+          <div class="accTitleInfo" (click)="acc.toggle('p0')" (click)="toggleSign('s0')" ><i class="fa fa-angle-double-{{s0}}"></i>&nbsp;&nbsp; About the place?&nbsp;&nbsp;<i class="fa fa-tree"></i></div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <blockquote class="blockquote bq-warning"> <!--primary-->
+          <p class="bq-title">Info notification</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quibusdam dignissimos itaque harum illo!
+            Quidem, corporis at quae tempore nisi impedit cupiditate perferendis nesciunt, ex dolores doloremque!
+            Sit, rem, in?
+          </p>
+        </blockquote>
+        <!-- <div class="jumbotron text-center hoverable p-4">
+          <div class="container-fluid">
+            <div class="row justify-content-center"> <h5>Highlights</h5></div>
+            <div class="row justify-content-md-center">
+              <div *ngFor="let image of _albums; let i=index" class="img-fluid">
+                <div class="col-12 col-md-auto col py-3 px-lg-3">
+                  <div class="view overlay zoom">
+                    <img [src]="image.thumb" class="img-fluid" class="img-thumbnail" (click)="open(i,_albums)" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div> -->
+
+      </ng-template>
+    </ngb-panel>
+
+
+    <ngb-panel id="p1">
+      <ng-template ngbPanelHeader>
+          <div class="accTitleWarn" (click)="acc.toggle('p1')" (click)="toggleSign('s1')" ><i class="fa fa-angle-double-{{s1}}"></i>&nbsp;&nbsp; What to expect?&nbsp;&nbsp;<i class="fa fa-gift"></i></div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <blockquote class="blockquote bq-warning">
+          <p class="bq-title">Our Plan..</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quibusdam dignissimos itaque harum illo!
+            Quidem, corporis at quae tempore nisi impedit cupiditate perferendis nesciunt, ex dolores doloremque!
+            Sit, rem, in?
+          </p>
+
+        </blockquote>
+        <app-card-deck></app-card-deck>
+      </ng-template>
+    </ngb-panel>
+
+    <ngb-panel id="p2">
+      <ng-template ngbPanelHeader>
+          <div class="accTitleSuccess" (click)="acc.toggle('p2')" (click)="toggleSign('s2')" ><i class="fa fa-angle-double-{{s2}}"></i>&nbsp;&nbsp;  Items to carry?&nbsp;&nbsp;<i class="fa fa-shopping-bag"></i></div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <blockquote class="blockquote bq-success">
+          <p class="bq-title">Success notification</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quibusdam dignissimos itaque harum illo!
+            Quidem, corporis at quae tempore nisi impedit cupiditate perferendis nesciunt, ex dolores doloremque!
+            Sit, rem, in?
+          </p>
+        </blockquote>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+<!--Accordion-->
+
+<br>
+
+<!--Gallery-->
+
+<!-- <div class="jumbotron text-center hoverable p-4">
+    <div class="container-fluid">
+      <div class="row justify-content-center"> <h5>Gallery</h5></div>
+      <div class="row justify-content-md-center">
+        <div *ngFor="let image of _albums; let i=index" class="img-fluid">
+          <div class="col-12 col-md-auto col py-3 px-lg-3">
+            <div class="view overlay zoom">
+              <img [src]="image.thumb" class="img-fluid" class="img-thumbnail" (click)="open(i)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+
+<!-- Accordion-->
+<ngb-accordion #acc2="ngbAccordion"   >
+  <ngb-panel id="p3">
+  <ng-template ngbPanelHeader>
+      <div class="gallery" (click)="acc2.toggle('p3')" (click)="toggleSign('eye')" ><i class="fa fa-{{eye}}"></i> GALLERY <i class="fa fa-{{eye}}"></i></div>
+  </ng-template>
+  <ng-template ngbPanelContent>
+
+    <!-- <div class="jumbotron text-center hoverable p-4"> -->
+      <div class="container-fluid">
+        <!-- <div class="row justify-content-center"> <h5>Gallery</h5></div> -->
+        <div class="row justify-content-md-center">
+          <div *ngFor="let image of _albums2; let i=index" class="img-fluid">
+            <div class="col-12 col">
+              <div class="view overlay zoom">
+                <img [src]="image.thumb" class="img-fluid" class="img-thumbnail" (click)="open(i,_albums2)" />
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+  </div>  </ng-template>
+</ngb-panel>
+</ngb-accordion>
+<!--Accordion-->
+
+
+<br>
+
+<!--Gallery-->
+
+<!-- Footer -->
+<app-footer-minimum></app-footer-minimum>
+<!-- Footer -->
+
+
+
