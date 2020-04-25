@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
       }
     });
   }
