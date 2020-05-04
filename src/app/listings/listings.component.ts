@@ -12,8 +12,8 @@ export class ListingsComponent {
 
     constructor(private _lightboxConfig: LightboxConfig, private _lightbox: Lightbox) {
       _lightboxConfig.wrapAround = true;
-      _lightboxConfig.positionFromTop = 75;
-      _lightboxConfig.centerVertically = true;
+      _lightboxConfig.positionFromTop = 90;
+      // _lightboxConfig.centerVertically = true;
       for (let i = 1; i <= 3; i++) {
       const src = 'https://mdbootstrap.com/img/Photos/Slides/img%20(6' + i + ').jpg';
       const caption = 'Image ' + i + ' caption here';
@@ -28,7 +28,7 @@ export class ListingsComponent {
     }
 
       for (let j = 1; j <= 6; j++) {
-      const src = 'https://mdbootstrap.com/img/Photos/Slides/img%20(14' + j + ').jpg';
+      const src = 'https://mdbootstrap.com/img/Photos/Slides/img%20(13' + j + ').jpg';
       const caption = 'Image ' + j + ' caption here';
       const thumb = './assets/1' + j + '.jpg' ;
       const album2 = {

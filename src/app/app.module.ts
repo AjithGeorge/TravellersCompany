@@ -21,6 +21,10 @@ import { LightboxModule } from 'ngx-lightbox';
 import { NgbModule, NgbAccordion } from '@ng-bootstrap/ng-bootstrap';
 import { FooterMinimumComponent } from './footer-minimum/footer-minimum.component';
 import { CardImageOverlayComponent } from './card-image-overlay/card-image-overlay.component';
+import { NewHomeComponent } from './new-home/new-home.component';
+import { CommonFooterComponent } from './common-footer/common-footer.component';
+import { NelliyampathyComponent } from './nelliyampathy/nelliyampathy.component';
+
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   // bgsColor: 'red',
@@ -34,9 +38,10 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 
 
 const appRoutes: Routes = [
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: HomeComponent },
   { path: 'listings', component: ListingsComponent },
-  { path: '**', component: HomeComponent }
+  { path: 'nelliyampathy', component: NelliyampathyComponent},
+  { path: '**', component: NewHomeComponent },
 ];
 
 @NgModule({
@@ -52,7 +57,10 @@ const appRoutes: Routes = [
     FooterComponent,
     ListingsComponent,
     FooterMinimumComponent,
-    CardImageOverlayComponent
+    CardImageOverlayComponent,
+    NewHomeComponent,
+    CommonFooterComponent,
+    NelliyampathyComponent
   ],
   imports: [
     BrowserModule,
