@@ -1,5 +1,4 @@
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" [containerInside]="false"
-  mdbFixedHeader>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" [containerInside]="false" mdbFixedHeader>
 
   <!-- Navbar brand -->
   <mdb-navbar-brand><a class="navbar-brand" href="#"><img src="./assets/whiteLogo.png" height="40"> TravellersCompany
@@ -37,26 +36,22 @@
     <!-- Links -->
 
     <ul class="navbar-nav ml-auto nav-flex-icons">
+<!--
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect >Hola, {{user}}</a>
+        </li> -->
+
       <li class="nav-item">
         <a class="nav-link">
-          <mdb-icon fab icon="twitter"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <mdb-icon fab icon="google-plus"></mdb-icon>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">
-          <div class="btn-group" mdbDropdown>
-            <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
-            <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+          <div class="btn-group" mdbDropdown >
+            <a class="nav-link waves-light" mdbWavesEffect mdbDropdownToggle >Hola, {{user}} <mdb-icon fas icon="user"></mdb-icon></a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-primary" ng-controller="loginController">
+              <a class="dropdown-item" [hidden]="this.isLoggedIn" #loginRef ><img class="google-icon" src="./assets/google.svg"/>&nbsp;&nbsp; Login with Google </a>
+              <a class="dropdown-item" *ngIf="this.isLoggedIn" (click)="clearSession()"><mdb-icon far icon="address-book"></mdb-icon> &nbsp;&nbsp;LogOut</a>
+              <!-- <a class="dropdown-item" href="#">Login with Facebook</a>
               <a class="dropdown-item" href="#">Something else here</a>
               <div class="divider dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+              <a class="dropdown-item" href="#">Separated link</a> -->
             </div>
           </div>
         </a>
@@ -64,4 +59,4 @@
     </ul>
   </links>
   <!-- Collapsible content -->
-  /mdb-navbar>
+</mdb-navbar>

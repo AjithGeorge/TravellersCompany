@@ -10,6 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 
 export class AppComponent implements OnInit {
+
   constructor(private ngxService: NgxUiLoaderService, private readonly router: Router) {
 
     this.router.events.subscribe((e) => {
