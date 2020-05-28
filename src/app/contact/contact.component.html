@@ -1,122 +1,113 @@
-<html lang="en">
-  <head>  <link href="C:\Users\Ajith.George\Desktop\STUDY\Web\self\travellersCompany\node_modules\lightbox2\dist\css\lightbox.css" rel="stylesheet" />
-  </head>
-<body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top">
+<app-navbar></app-navbar>
+<!-- Jumbotron -->
+<div class="card card-image" style="background-image: url(./assets/contact.jpg);">
+  <div class="text-white text-center rgba-stylish-medium py-5 px-4 rgba-black-strong">
+    <div class="py-5">
+      <!-- Content -->
+      <!-- <h5 class="h5 orange-text"><i class="fas fa-camera-retro"></i> Photography</h5> -->
+      <h2 class="card-title h2 my-4 py-2"><strong>Lets plan your next adventure...</strong></h2>
+      <p class="mb-4 pb-2 px-md-5 mx-md-5">
+        <strong>Want to get in touch?
+          Here's how you can reach us...</strong>
+      </p>
+      <!-- <a class="btn peach-gradient">Contact Us</a> -->
 
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="#">Navbar</a>
-
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-
-        <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <!-- Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-        <!-- Links -->
-
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          </div>
-        </form>
-      </div>
-      <!-- Collapsible content -->
-
-    </nav>
-    <!--/.Navbar-->
-
-    <!--Carousel Wrapper-->
-    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-
-            <!--First slide-->
-            <div class="carousel-item active">
-                <!--Mask-->
-                <div class="view">
-                  <!--Video source-->
-                  <video autoplay loop playsinline muted>
-                      <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
-                  </video>
-                  <!-- Carousel content -->
-                  <!-- <div class="full-bg-img flex-center mask rgba-indigo-light white-text">
-                    <ul class="animated fadeInUp col-md-12 list-unstyled list-inline">
-                      <li>
-                        <h1 class="font-weight-bold text-uppercase">Material Design for Bootstrap 4</h1>
-                      </li>
-                      <li>
-                        <p class="font-weight-bold text-uppercase py-4">The most powerful and free UI KIT for Bootstrap</p>
-                      </li>
-                    </ul>
-                  </div> -->
-                </div>
-                <!--/Mask-->
-            </div>
-            <!--/First slide-->
-
-        </div>
-        <!--/.Slides-->
-
-        <!--Controls-->
-        <!-- <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a> -->
-        <!--/.Controls-->
     </div>
-    <!--/.Carousel Wrapper-->
-    <a href="./assets/11.jpg" data-lightbox="roadtrip">Image #2</a>
-    <a href="./assets/12.jpg" data-lightbox="roadtrip">Image #3</a>
-    <a href="./assets/13.jpg" data-lightbox="roadtrip">Image #4</a>
+  </div>
+</div>
+<!-- Jumbotron -->
 
+<div class="cloudy-knoxville-gradient">
+  <br>
+  <div class="row">
+    <div class="container">
+      <div class="flex-shrink-1 hoverable">
+        <form class="gform text-center border border-light p-5" style="background-color:white">
+          <div class="form-elements">
+            <!-- <p class="h4 mb-4"><strong>Contact us</strong></p> -->
+            <h2 class="card-title h2 my-2 py"><strong>Contact us</strong></h2>
+            <p>We would love to hear from you!</p>
+            <fieldset>
+              <!-- <label for="name">Name: </label> -->
+              <!-- <input id="name" name="name" placeholder="Name" /> -->
+              <input type="text" formControlName="contactFormName" input id="name" mdbInput class="form-control mb-4"
+                placeholder="Name" name="name">
+            </fieldset>
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="../../../js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="../../../js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-   <script type="text/javascript" src="../../../js/mdb.min.js"></script>
-   <script src="C:\Users\Ajith.George\Desktop\STUDY\Web\self\travellersCompany\node_modules\lightbox2\dist\js\lightbox-plus-jquery.js"></script>
-   <script>
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true
-    })
-  </script>
-</body>
+            <fieldset>
+              <!-- <label for="name">Name: </label> -->
+              <!-- <input id="name" name="name" placeholder="Name" /> -->
+              <input type="text" formControlName="contactFormColor" input id="color" mdbInput class="form-control mb-4"
+                placeholder="Phone" name="color">
+            </fieldset>
 
-</html> -->
+            <fieldset>
+              <!-- <label for="email"><em>Your</em> Email Address:</label>
+        <input id="email" name="email" type="email" value=""
+        required placeholder="your.name@email.com"/> -->
+              <input type="email" formControlName="contactFormEmail" input id="email" mdbInput class="form-control mb-4"
+                required placeholder="E-mail" name="email">
+            </fieldset>
+
+            <fieldset>
+              <!-- <label for="message">Message: </label> -->
+              <!-- <textarea id="message" name="message" rows="10"
+        placeholder="Tell us what's on your mind..."></textarea> -->
+              <div class="form-group">
+                <textarea formControlName="contactFormMessage" class="form-control rounded-0" textarea id="message"
+                  rows="3" placeholder="Message" name="message"></textarea>
+              </div>
+            </fieldset>
+
+            <!-- <button class="button-success pure-button button-xlarge" (click)='loadScript()'>
+        <i class="fa fa-paper-plane"></i>&nbsp;Send</button> -->
+            <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+              type="submit" (click)='loadScript()'>Send</button>
+          </div>
+
+          <!-- Customise the Thankyou Message People See when they submit the form: -->
+          <div class="thankyou_message" style="display:none;">
+            <h2 style="color:#00c5be">"Thank You"&nbsp;<mdb-icon far icon="smile-beam"></mdb-icon>
+            </h2>
+            <h2 style="color:#00c5be">We will get back to you soon!</h2>
+            <br><br><br>
+            <div style="color:grey">
+              <p>You're not going to hit a ridiculously long phone menu when you call us.</p>
+              <p> Your email isn't going to the inbox abyss, never to be seen or heard from again.</p>
+              <p> We would provide you with the exceptional service we'd want to experience ourselves!</p>
+            </div>
+            <br>
+          </div>
+
+        </form>
+        <!-- <script data-cfasync="false" src="form-submission-handler.js"></script>
+  <script data-cfasync="false" src="./assets/form-submission-handler.js"></script> -->
+      </div>
+      <br>
+    </div>
+    <div class="flex-grow-1">
+      <div class="container text-justified border border-light p-5" style="background-color:transparent">
+        <h2 class="card-title h2 my-4 py-2"><strong>Connect with us:</strong></h2>
+        <p>Phone: <span style="color:#00c5be">+91-1234-5678-90</span></p>
+        <br>
+        <p>For support or any questions:</p>
+        <p>Email us at: <a href="#" style="color:#00c5be">support@travellerscompany.in</a></p>
+        <br>
+        <p>
+          Send a message:&nbsp;&nbsp;
+          <mdb-icon fab icon="facebook-f"></mdb-icon>
+          &nbsp;&nbsp;
+          <mdb-icon fab icon="twitter"></mdb-icon>
+          &nbsp;&nbsp;
+          <mdb-icon fab icon="instagram"></mdb-icon>
+        </p>
+
+        <!-- <script data-cfasync="false" src="form-submission-handler.js"></script>
+    <script data-cfasync="false" src="./assets/form-submission-handler.js"></script> -->
+      </div>
+    </div>
+  </div>
+
+  <br>
+</div>
+<app-footer-minimum></app-footer-minimum>

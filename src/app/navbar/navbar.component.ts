@@ -54,9 +54,11 @@ export class NavbarComponent implements OnInit {
         }
 
 
-      }, (error) => {
-        alert(JSON.stringify(error, undefined, 2));
-      });
+      },
+      // (error) => {
+      //   alert(JSON.stringify(error, undefined, 2));
+      // }
+      );
 
   }
   googleSDK() {

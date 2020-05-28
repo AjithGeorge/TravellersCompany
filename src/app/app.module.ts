@@ -38,9 +38,10 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 
 
 const appRoutes: Routes = [
-  { path: 'contact', component: HomeComponent },
+  { path: 'testHome', component: HomeComponent },
   { path: 'listings', component: ListingsComponent },
   { path: 'nelliyampathy', component: NelliyampathyComponent},
+  { path: 'contact', component: ContactComponent},
   { path: '**', component: NewHomeComponent },
 ];
 
